@@ -2,15 +2,15 @@
 
 // set up ======================================================================
 // get all the tools we need
-var express  = require('express');
-var app      = express()
+var express  = require('express')
+  , app      = express()
   , http	 = require('http')
-  , server = http.createServer(app)
-  , io = require('socket.io').listen(server);
-var port     = process.env.PORT || 8080;
-var mongoose = require('mongoose');
-var passport = require('passport');
-var flash    = require('connect-flash');
+  , server   = http.createServer(app)
+  , io       = require('socket.io').listen(server);
+  , port     = process.env.PORT || 8080;
+  , mongoose = require('mongoose');
+  , passport = require('passport');
+  , flash    = require('connect-flash');
 
 var configDB = require('./config/database.js');
 
@@ -38,10 +38,6 @@ app.configure(function() {
 
 // routes ======================================================================
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
-
-
-
-
 
 // launch ======================================================================
 server.listen(8080);
