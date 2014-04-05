@@ -16,48 +16,51 @@ body{
 	font-family: 'Quicksand';
 	src: url("Quicksand-Regular.otf") format("opentype");
 }
-input{
-
+@font-face{
+	font-family: 'Inconsolata';
+	src: url("Inconsolata.otf") format("opentype");
 }
 #header{
 	width: 100%;
-	background-color: rgba(255,26,173,.3);
 	position: absolute;
 	top: 0;
 }
 #header p{
 	text-align: center;
+	margin: 0;
 }
 #text1{
 	font-style: italic;
 	font-family: 'Quicksand', sans-serif;
-	font-size: 3em;
+	font-size: 35px;
 }
 #text2{
 	font-style: italic;
 	font-family: 'Quicksand', sans-serif;
-	font-size: 3em;
-	letter-spacing: -6px;
+	font-size: 35px;
 }
 #text3{
 	font-style: italic;
 	font-family: 'Quicksand', sans-serif;
-	font-size: 3em;
-	letter-spacing: -10px;
+	font-size: 35px;
+	letter-spacing: -5px;
 }
 #text4{
 	font-family: 'Kaushan', serif;
-	font-size: 3em;
+	font-size: 35px;
 }
 #text5{
 	font-style: italic;
 	font-family: 'Quicksand', sans-serif;
-	font-size: 3em;
+	font-size: 35px;
 }
 #contentwrapper{
 	display: table;
 	height: 100%;
 	position: absolute;
+}
+.content{
+	font-family: 'Inconsolata', sans-serif;
 }
 .cell{
 	display: table-cell;
@@ -65,14 +68,22 @@ input{
 	width: 25%;
 }
 .inputwrapper{
+	width: 100%;
 	text-align: center;
 }
+textarea{
+	width: 90%;
+	background: #fff;
+   	-moz-box-shadow:    inset 0 0 5px #000000;
+ 	-webkit-box-shadow: inset 0 0 5px #000000;
+   	box-shadow:         inset 0 0 5px #000000;
+   	min-width: 200px;
+   	min-height: 100px;
+}
 #theBulletin{
-	background-color: rgba(5,34,173,.3);
 	padding-right: 6px;
 }
 #theChat{
-	background-color: rgba(115,2,3,.3);
 	padding-left: 3px;
 	padding-right: 3px;
 }
@@ -82,5 +93,10 @@ input{
 }
 #theTasks{
 	padding-left: 6px;
-	background-color: rgba(255,201,173,.3);
+}
+#outputwrapper{
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 90%;
+	left: 0;
 }

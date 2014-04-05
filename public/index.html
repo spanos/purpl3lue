@@ -50,8 +50,14 @@ $('#outgoingChatMessage').val('');
 	</div>
 	<div class="cell">
 		<div id="theChat" class="content">
-			Incoming Chat: <ul id="incomingChatMessages"></ul>
-			<p class="inputwrapper"><input type="text" id="outgoingChatMessage"></p>
+			<div id="outputwrapper">
+				<ul id="incomingChatMessages"></ul>
+			</div>
+				<p class="inputwrapper">
+					<textarea class="shadow" type="text" id="outgoingChatMessage">
+					</textarea>
+				</p>
+
 		</div>
 	</div>
 	<div class="cell">
