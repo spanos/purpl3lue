@@ -3,7 +3,10 @@
 // set up ======================================================================
 // get all the tools we need
 var express  = require('express');
-var app      = express();
+var app      = express()
+  , http	 = require('http')
+  , server = http.createServer(app)
+  , io = require('socket.io').listen(server);
 var port     = process.env.PORT || 8080;
 var mongoose = require('mongoose');
 var passport = require('passport');
@@ -41,6 +44,6 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 
 
 // launch ======================================================================
-app.listen(port);
+server.listen(8080);
 app.use(express.static(__dirname + '/public'));
 console.log('The magic happens on port ' + port);
