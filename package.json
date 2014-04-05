@@ -5,7 +5,8 @@
   "main": "index.html",
   "dependencies": {
     "express": "^3.5.1",
-    "logfmt": "^1.1.2"
+    "logfmt": "^1.1.2",
+    "socket.io": "0.9.16"
   },
   "engines": {
     "node": "0.10.x"
