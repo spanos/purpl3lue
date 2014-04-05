@@ -1,3 +1,86 @@
 body{
-	background-color: blue;	
+	background-color: white;	
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+@font-face{
+	font-family: 'Kaushan';
+	src: url("KaushanScript-Regular.otf") format("opentype");
+}
+@font-face{
+	font-family: 'Alex';
+	src: url("AlexBrush-Regular.ttf") format("truetype");
+}
+@font-face{
+	font-family: 'Quicksand';
+	src: url("Quicksand-Regular.otf") format("opentype");
+}
+input{
+
+}
+#header{
+	width: 100%;
+	background-color: rgba(255,26,173,.3);
+	position: absolute;
+	top: 0;
+}
+#header p{
+	text-align: center;
+}
+#text1{
+	font-style: italic;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3em;
+}
+#text2{
+	font-style: italic;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3em;
+	letter-spacing: -6px;
+}
+#text3{
+	font-style: italic;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3em;
+	letter-spacing: -10px;
+}
+#text4{
+	font-family: 'Kaushan', serif;
+	font-size: 3em;
+}
+#text5{
+	font-style: italic;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3em;
+}
+#contentwrapper{
+	display: table;
+	height: 100%;
+	position: absolute;
+}
+.cell{
+	display: table-cell;
+	vertical-align: middle;
+	width: 25%;
+}
+.inputwrapper{
+	text-align: center;
+}
+#theBulletin{
+	background-color: rgba(5,34,173,.3);
+	padding-right: 6px;
+}
+#theChat{
+	background-color: rgba(115,2,3,.3);
+	padding-left: 3px;
+	padding-right: 3px;
+}
+#theChat ul{
+	list-style-type: none;
+	padding-left: 0;
+}
+#theTasks{
+	padding-left: 6px;
+	background-color: rgba(255,201,173,.3);
 }
