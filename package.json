@@ -1,0 +1,26 @@
+{
+  "name": "purpl3lue",
+  "version": "0.0.0",
+  "description": "prototype group management app",
+  "main": "web.js",
+  "dependencies": {
+    "express": "^3.5.1",
+    "logfmt": "^1.1.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "project",
+    "group",
+    "task",
+    "management",
+    "organization"
+  ],
+  "author": "spanos",
+  "license": "ISC"
+}
