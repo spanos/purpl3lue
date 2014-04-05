@@ -2,7 +2,7 @@ var fs = require('fs')
 , http = require('http')
 , socketio = require('socket.io');
  
-var port = process.env.PORT || CONFIG.port;
+var port = process.env.PORT || 80;
 
 var server = http.createServer(function(req, res) {
 	res.writeHead(200, { 'Content-type': 'text/html'});
