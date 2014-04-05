@@ -4,6 +4,9 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <!--<script src="http://purpl3blue.herokuapp.com/socket.io/socket.io.js"></script>-->
 <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="HTML-KickStart-master/js/kickstart.js"></script> <!-- KICKSTART -->
+<link rel="stylesheet" href="HTML-KickStart-master/css/kickstart.css" media="all" /> <!-- KICKSTART -->
 <script>
 $(function(){
 var iosocket = io.connect();
@@ -30,10 +33,17 @@ $('#outgoingChatMessage').val('');
 });
 </script>
 </head>
-<body>
+
+<div class="col_4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+
+<div class="col_4"><body>
 Incoming Chat: <ul id="incomingChatMessages"></ul>
- 
- 
+  
 <input type="text" id="outgoingChatMessage">
-</body>
+</body></div>
+
+<div class="col_4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy 
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+
 </html>
