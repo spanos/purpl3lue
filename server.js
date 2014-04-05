@@ -6,13 +6,12 @@ var express  = require('express')
   , app      = express()
   , http	 = require('http')
   , server   = http.createServer(app)
-  , io       = require('socket.io').listen(server);
-  , port     = process.env.PORT || 8080;
-  , mongoose = require('mongoose');
-  , passport = require('passport');
-  , flash    = require('connect-flash');
-
-var configDB = require('./config/database.js');
+  , io       = require('socket.io').listen(server)
+  , port     = process.env.PORT || 8080
+  , mongoose = require('mongoose')
+  , passport = require('passport')
+  , flash    = require('connect-flash')
+  , configDB = require('./config/database.js');
 
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
