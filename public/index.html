@@ -2,14 +2,17 @@
 <html>
 <head>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="interact.js"></script>
 <!--<script src="http://purpl3blue.herokuapp.com/socket.io/socket.io.js"></script>-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script>
 $(function(){
 	var iosocket = io.connect();
 	iosocket.on('connect', function () {
+		console.log('connected!!!!');
+		/*
 		$('#incomingChatMessages').append($('<li>Connected</li>'));
 		iosocket.on('message', function(message) {
 			$('#incomingChatMessages').append($('<li></li>').text(message));
@@ -17,6 +20,8 @@ $(function(){
 		iosocket.on('disconnect', function() {
 			$('#incomingChatMessages').append('<li>Disconnected</li>');
 		});
+*/
+	iosocket.emit('test1', 't123');
 	});
 	$('#outgoingChatMessage').keypress(function(event) {
 		if(event.which == 13) {
@@ -26,6 +31,10 @@ $(function(){
 			$('#outgoingChatMessage').val('');
 		}
 	});
+	iosocket.on('connected1', function(data) {
+			console.log(data)
+			alert(data);
+		});
 });
 </script>
 
@@ -40,28 +49,35 @@ $(function(){
 		<span id="text4">3</span>
 		<span id="text5">lue</span>
 	</p>
+	<div id="sexyline"></div>
 </div>
 <div id="contentwrapper">
-	<div class="cell">
+	<div id="col-left" class="cell">
 		<div id="theBulletin" class="content">
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+			<p>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+			</p>
 		</div>
 	</div>
-	<div class="cell">
+	<div class="cell bot">
 		<div id="theChat" class="content">
 			<div id="outputwrapper">
 				<ul id="incomingChatMessages"></ul>
 			</div>
-				<p class="inputwrapper">
-					<textarea class="shadow" type="text" id="outgoingChatMessage">
-					</textarea>
-				</p>
-
+			<p class="inputwrapper">
+				<textarea class="shadow" type="text" id="outgoingChatMessage">
+				</textarea>
+			</p>
 		</div>
 	</div>
-	<div class="cell">
+	<div class="cell mid">
 		<div id="theTasks" class="content">
-			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+			<ul id="theList">
+				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</li>
+				<li>Test item 1!</li>
+				<li>Seriously, get this shit done Dave.</li>
+				<li>Once upon a midnight dreary, while I pondered weak and weary...</li>
+			</ul>
 		</div>
 	</div>
 </body>
