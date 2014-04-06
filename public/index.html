@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="interact.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="interact.js"></script>
 <!--<script src="http://purpl3blue.herokuapp.com/socket.io/socket.io.js"></script>-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script>
 $(function(){
@@ -53,9 +52,9 @@ $(function(){
 </div>
 <div id="contentwrapper">
 	<div id="col-left" class="cell">
-		<div id="theBulletin" class="content">
+		<div id="theBulletin" class="content" contenteditable="true">
 			<p>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+				Bulletin board
 			</p>
 		</div>
 	</div>
@@ -73,10 +72,18 @@ $(function(){
 	<div class="cell mid">
 		<div id="theTasks" class="content">
 			<ul id="theList">
-				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</li>
-				<li>Test item 1!</li>
-				<li>Seriously, get this shit done Dave.</li>
-				<li>Once upon a midnight dreary, while I pondered weak and weary...</li>
+				<li contenteditable="true">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+				</li>
+				<li contenteditable="true">
+					Test item 1!
+				</li>
+				<li contenteditable="true">
+					Seriously, get this shit done Dave.
+				</li>
+				<li contenteditable="true">
+					Once upon a midnight dreary, while I pondered weak and weary...
+				</li>
 			</ul>
 		</div>
 	</div>
