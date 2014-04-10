@@ -28,6 +28,14 @@ $(function(){
 			iosocket.send($('#outgoingChatMessage').val());
 			$('#incomingChatMessages').append($('<li></li>').text($('#outgoingChatMessage').val()));
 			$('#outgoingChatMessage').val('');
+			var len = $("#incomingChatMessages li").length;
+			if (len > 20){
+				console.log("There are " + len + " messages.\n");
+				//$("#incomingChatMessages li:nth-child(10)").prevAll().css("display", "none");
+				$("#incomingChatMessages li:nth-child(1)").detach();
+			} else {
+				console.log("There are only " + len + " messages.\n");
+			}
 		}
 	});
 	iosocket.on('connected1', function(data) {
@@ -41,13 +49,7 @@ $(function(){
 </head>
 <body>
 <div id="header">
-	<p>
-		<span id="text1">pur</span>
-		<span id="text2">p</span>
-		<span id="text3">l</span>
-		<span id="text4">3</span>
-		<span id="text5">lue</span>
-	</p>
+	<p>WorldHack2014</p>
 	<div id="sexyline"></div>
 </div>
 <div id="contentwrapper">
@@ -69,21 +71,84 @@ $(function(){
 			</p>
 		</div>
 	</div>
-	<div class="cell mid">
+	<div class="cell">
 		<div id="theTasks" class="content">
 			<ul id="theList">
-				<li contenteditable="true">
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+				<li class="oldShowItem" id="person1">
+					Person 1
+					<ul>
+						<li contenteditable="true">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.
+						</li>
+						<li contenteditable="true">
+							Test item 1!
+						</li>
+						<li contenteditable="true">
+							Seriously, get this shit done Dave.
+						</li>
+						<li contenteditable="true">
+							Once upon a midnight dreary, while I pondered weak and weary...
+						</li>
+					</ul>
 				</li>
-				<li contenteditable="true">
-					Test item 1!
-				</li>
-				<li contenteditable="true">
-					Seriously, get this shit done Dave.
-				</li>
-				<li contenteditable="true">
-					Once upon a midnight dreary, while I pondered weak and weary...
-				</li>
+				<li class="oldShowItem" id="person2">
+					Person 2
+					<ul>
+						<li contenteditable="true">
+						Welcome to Jurassic Park.
+						</li>
+						<li contenteditable="true">
+							It was the best of times; it was the worst of times.
+						</li>
+						<li contenteditable="true">
+							Better to reign in Hell than serve in Heaven.
+						</li>
+						<li contenteditable="true">
+							Body mass index is a number that classifies your weight as low, norm...
+						</li>
+					</ul>
+				</li>	
+				<li class="oldShowItem" id="person3">
+					Person 3
+					<ul>
+						<li contenteditable="true">
+							I have no idea what I'm doing.
+						</li>
+						<li contenteditable="true">
+							Santa Claus is comin' to town.
+						</li>
+						<li contenteditable="true">
+							Microsoft XP is no more.
+						</li>
+						<li contenteditable="true">
+							New Obama administration rules aimed at protecting African elephants are causing widespread anxiety in the music world.
+						</li>
+					</ul>
+				</li>	
+				<li class="oldShowItem" id="person4">
+					Person 4
+					<ul>
+						<li contenteditable="true">
+							Get money get paid.
+						</li>
+					</ul>
+				</li>	
+				<li class="oldShowItem" id="person5">
+					Person 5
+					<ul>
+						<li contenteditable="true">
+							Get money get paid.
+						</li>
+					</ul>
+				</li>	
+				<li class="oldShowItem" id="person6">
+					Person 6
+					<ul>
+						<li contenteditable="true">
+							Get money get paid.
+						</li>
+					</ul>
+				</li>	
 			</ul>
 		</div>
 	</div>

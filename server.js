@@ -13,6 +13,7 @@ var express  = require('express')
   , flash    = require('connect-flash')
   , configDB = require('./config/database.js');
 
+
 // configuration ===============================================================
 mongoose.connect(configDB.url); // connect to our database
 
@@ -34,6 +35,16 @@ app.configure(function() {
 	app.use(flash()); // use connect-flash for flash messages stored in session
 
 });
+
+io.on('connection', function(socket) {
+	console.log(socket);
+	socket.emit('connected1', 'hello123');
+
+	socket.on('t1', function(data) {
+		console.log('ttttttttttttttttttt : ' + data);
+	});
+});
+
 
 // routes ======================================================================
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport

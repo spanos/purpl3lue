@@ -7,4 +7,10 @@ $(document).ready(function(){
 	}, function() {
 		$( this ).removeClass( "hover" );
 	});
+
+	$("#theList > li").click(function(){
+	    $('.newShowItem').removeClass('newShowItem').addClass('oldShowItem');
+	    $(this).removeClass('oldShowItem').addClass('newShowItem');
+	});
+	
 });
