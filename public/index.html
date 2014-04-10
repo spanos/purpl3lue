@@ -9,25 +9,23 @@
 <script>
 $(function(){
 	var iosocket = io.connect();
+
+	//test connection
 	iosocket.on('connect', function () {
 		console.log('connected!!!!');
-		/*
-		$('#incomingChatMessages').append($('<li>Connected</li>'));
-		iosocket.on('message', function(message) {
-			$('#incomingChatMessages').append($('<li></li>').text(message));
-		});
-		iosocket.on('disconnect', function() {
-			$('#incomingChatMessages').append('<li>Disconnected</li>');
-		});
-*/
-	iosocket.emit('test1', 't123');
+		iosocket.emit('test1', 't123');
 	});
+	iosocket.on('connected1', function(data) {
+		console.log(data);
+	});
+
+	//send stuff
 	$('#outgoingChatMessage').keypress(function(event) {
 		if(event.which == 13) {
 			event.preventDefault();
-			iosocket.send($('#outgoingChatMessage').val());
-			$('#incomingChatMessages').append($('<li></li>').text($('#outgoingChatMessage').val()));
+			iosocket.emit('test2', $('#outgoingChatMessage').val());
 			$('#outgoingChatMessage').val('');
+			//cut off at 20 messages
 			var len = $("#incomingChatMessages li").length;
 			if (len > 20){
 				console.log("There are " + len + " messages.\n");
@@ -38,11 +36,15 @@ $(function(){
 			}
 		}
 	});
-	iosocket.on('connected1', function(data) {
-			console.log(data)
-			alert(data);
-		});
+
+	//receive stuff
+	iosocket.on('test3', function(data) {
+		console.log(data);
+		$('#incomingChatMessages').append($('<li></li>').text(data));
+	});
+
 });
+
 </script>
 
 <link rel="stylesheet" type="text/css" href="style.css"></style>

@@ -40,11 +40,17 @@ io.on('connection', function(socket) {
 	console.log(socket);
 	socket.emit('connected1', 'hello123');
 
-	socket.on('t1', function(data) {
-		console.log('ttttttttttttttttttt : ' + data);
+	socket.on('test1', function(data) {
+		console.log('Test 1 initiating : ' + data);
+	});
+	
+	socket.on('test2', function(data) {
+		console.log('Test 2 initiating : ' + data);
+		//io.sockets.emit('test3', data);
+		io.sockets.emit('test3', data);
+		console.log('Should have sent test3');	
 	});
 });
-
 
 // routes ======================================================================
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
