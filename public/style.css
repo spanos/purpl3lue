@@ -1,8 +1,13 @@
 body{
-	background-color: white;	
+	background-color: #2F943E;	
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
+}
+/*alternative background color: #082E4D*/
+@font-face{
+	font-family: 'Sansation';
+	src: url("Sansation-Regular.ttf") format("truetype");
 }
 @font-face{
 	font-family: 'Gyre';
@@ -28,12 +33,13 @@ body{
 	width: 100%;
 	position: absolute;
 	top: 0;
+	color: white;
 }
 #header p{
 	text-align: center;
 	margin: 0;
-	font-size: 20px;
-	font-family: "Inconsolata";
+	font-size: 24px;
+	font-family: "Sansation";
 }
 /*#sexyline{
 	margin-left: auto;
@@ -75,12 +81,13 @@ textarea{
 	background: #fff;
 }
 #theBulletin{
-	box-shadow: inset 0 3px 5px 0.5px #111;
+	box-shadow: inset -2px 0px 5px 0.5px #111;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 33%;
 	height: 100%;
+	background-color: white;
 }
 #theBulletin p{
 	margin: 10px;
@@ -102,12 +109,13 @@ textarea{
    	min-height: 100px;
 }
 #theTasks{
-	box-shadow: inset 0 3px 5px 0.5px #111;
+	box-shadow: inset 2px 0px 5px 0.5px #111;
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 33%;
 	height: 100%;
+	background-color: white;
 }
 #outputwrapper{
 	padding-left: 5%;
@@ -129,6 +137,13 @@ textarea{
 	margin-bottom: 15px;
 	max-width: 95%;
 }
+
+/*
+#theList ul, li{
+	background-color: #082E4D;
+}
+*/
+
 /*
 #theList li li{
 	display: none;
@@ -146,9 +161,14 @@ textarea{
 .newShowItem{
 	padding: 1px 3px;
 	box-shadow: 0 3px 4px 0px #111;
+	background-color: #2F943E;
+	color: white;
+	font-family: 'Sansation';
 }
 .newShowItem ul > li{
 	display: block;
+	color: black;
+	font-family: 'Inconsolata';
 }
 .oldShowItem ul > li{
 	display: none;
